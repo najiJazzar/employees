@@ -1,0 +1,25 @@
+<h3 class="title">Create</h3>
+<form myForm>
+	<label>Name :</label>
+	<input class="w3-input w3-border" type="text" ng-model="_name"  placeholder="Name" required>
+	
+<br>
+	<label for="dateofbirth">Date Of Birth</label>
+	<input type="text" ng-model="_dateofbirth">
+<br>
+<br>
+	<label>Department</label>
+	<select ng-model="_dept" required>
+		<option ng-repeat="Dept in Depts">{{Dept}}</option>
+	</select>
+<br>
+<br>
+	<label>Years of experience</label>
+	<input class="w3-input w3-border" type="number" ng-model="_yearsExp" placeholder="Years of experience">
+<br>
+<br>
+<br>
+	<button class="btn btn-default" ng-click="createNewEmployee()">Save</button>
+</form>
+
+
