@@ -1,0 +1,29 @@
+{
+  "name": "employeesapp",
+  "version": "1.0.0",
+  "description": "RESTful employees App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/jazzar/employees.git"
+  },
+  "keywords": [
+    "RESTful",
+    "angular",
+    "materialDesing"
+  ],
+  "author": "Naji Al-Jazzar",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jazzar/employees#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.0.43",
+    "body-parser": "^1.13.3"
+  }
+}
