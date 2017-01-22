@@ -1,0 +1,47 @@
+<div class="cont">
+<h3 class="title">Employees list</h3>
+<table class="w3-table w3-bordered">
+  <tr>
+	<th>ID</th>
+    <th>Name</th>
+    <th>Date of birth</th>
+    <th>Department</th>
+    <th>Years of experience</th>
+    <th>operations</th>
+  </tr>
+  <tr ng-repeat="employee in employees">
+    <td>{{ employee.id }}</td>
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.dateofbirth }}</td>
+    <td>{{ employee.dept }}</td>
+    <td>{{ employee.yearsExp }}</td>
+    <td>
+      <button class="w3-btn w3-ripple edit" ng-click="openForm(employee.id)" > &#9998; Edit</button>
+      <button class="w3-btn w3-ripple" ng-confirm-click="Are you sure to delete this record ?" confirmed-click="removeEmployee(employee.id)"><i class="fa fa-trash" aria-hidden="true"></i>
+  Delete</button>
+    </td>
+  </tr>
+</table>
+<br>
+<div ng-hide="hideEdit">
+				<label>Name</label>
+				<input class="w3-input w3-border" type="text" ng-model="name"  placeholder="Name" required>
+			<br>
+				<label for="dateofbirth">Date Of Birth</label>
+				<input class="w3-input w3-border" type="text" ng-model="dateofbirth" required>
+			<br>
+			<br>
+				<label>Department</label>
+				<select ng-model="dept" required>
+					<option ng-repeat="Dept in Depts">{{Dept}}</option>
+				</select>
+	
+			<br>
+			<br>
+				<label>Years of experience</label>
+				<input class="w3-input w3-border" type="number" ng-model="yearsExp" placeholder="Years of experience" required>
+				<button class="w3-btn w3-green w3-ripple" ng-disabled="false" ng-click="saveMe()">&#10004; Save Changes</button>
+</div>		
+ 
+ <button class="w3-btn w3-green w3-ripple" ng-click="redirectMe()" ><i class="fa fa-plus-circle" aria-hidden="true"></i> Create New User</button>
+</div>
